@@ -38,8 +38,8 @@ const testimonials = [
 
 const TestimonialsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-[#9b87f5]/10 via-[#7E69AB]/20 to-background/90" id="testimonials">
-    <div className="section-container max-w-3xl mx-auto">
-      <h2 className="section-title text-4xl md:text-5xl text-primary mb-12 font-bold animate-fade-in">
+    <div className="section-container max-w-3xl mx-auto fade-in">
+      <h2 className="section-title text-4xl md:text-5xl text-primary mb-12 font-bold fade-in">
         Testimonials
       </h2>
       <Carousel
@@ -53,7 +53,7 @@ const TestimonialsSection: React.FC = () => (
           {testimonials.map((testi, idx) => (
             <CarouselItem key={idx} className="flex justify-center">
               <div
-                className="relative w-full max-w-md bg-card/80 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform animate-fade-in"
+                className="relative w-full max-w-md bg-card/80 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-xl transition-transform fade-in"
                 style={{
                   animationDelay: `${idx * 120}ms`,
                 }}
@@ -61,7 +61,7 @@ const TestimonialsSection: React.FC = () => (
                 <img
                   src={testi.avatar}
                   alt={testi.name}
-                  className="w-20 h-20 rounded-full mb-4 border-4 border-primary/40 object-cover"
+                  className="w-20 h-20 rounded-full mb-4 border-4 border-primary/40 object-cover scale-hover"
                 />
                 <div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, starIdx) => (

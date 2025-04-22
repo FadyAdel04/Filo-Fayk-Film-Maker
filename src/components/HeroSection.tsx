@@ -26,9 +26,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalInfo }) => {
 
   return (
     <section id="home" className="min-h-screen flex items-center pt-16 pb-8 overflow-hidden">
-      <div className="section-container grid md:grid-cols-2 gap-8 items-center">
+      <div className="section-container grid md:grid-cols-2 gap-8 items-center fade-in">
         {/* Text Content - Left Side */}
-        <div className="space-y-6 animate-fade-in">
+        <div className="space-y-6 fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             I'm <span className="text-primary">{personalInfo.name}</span> <br />
             <span className="text-white">{personalInfo.title}</span>
@@ -39,7 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalInfo }) => {
           <SocialLinks links={personalInfo.social} />
           <button 
             onClick={scrollToWork}
-            className="mt-8 px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
+            className="mt-8 px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2 scale-hover"
           >
             View My Work
             <ArrowDown size={18} />
@@ -47,8 +47,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalInfo }) => {
         </div>
 
         {/* Image - Right Side */}
-        <div className="flex justify-center relative">
-          <div className="relative z-10 rounded-xl overflow-hidden w-full max-w-md shadow-xl animate-fade-in">
+        <div className="flex justify-center relative slide-in-up">
+          <div className="relative z-10 rounded-xl overflow-hidden w-full max-w-md shadow-xl">
             <img 
               src={personalInfo.profileImage} 
               alt={personalInfo.name} 
@@ -56,13 +56,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalInfo }) => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40"></div>
           </div>
-          {/* Decorative element */}
           <div className="absolute -top-8 -right-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
         </div>
 
         {/* Scroll down indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bounce-slow hidden md:block">
           <ArrowDown size={24} className="text-primary" />
         </div>
       </div>

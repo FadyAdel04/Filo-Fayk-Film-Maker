@@ -43,15 +43,15 @@ const tools = [
 
 const FeaturedToolsSection: React.FC = () => (
   <section className="py-20 bg-gradient-to-t from-background/80 via-[#fae5fa]/10 to-background/95" id="features">
-    <div className="section-container max-w-5xl mx-auto">
-      <h2 className="section-title text-3xl md:text-4xl text-primary mb-10 font-bold animate-fade-in">
+    <div className="section-container max-w-5xl mx-auto fade-in">
+      <h2 className="section-title text-3xl md:text-4xl text-primary mb-10 font-bold fade-in">
         Featured Tools & Techniques
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {tools.map((tool, idx) => (
           <div
             key={tool.title}
-            className={`w-full rounded-2xl shadow-lg ${tool.bg} p-8 flex flex-col items-center text-center transition-transform hover:scale-105 animate-fade-in`}
+            className={`w-full rounded-2xl shadow-lg ${tool.bg} p-8 flex flex-col items-center text-center transition-transform scale-hover fade-in`}
             style={{ animationDelay: `${idx * 120}ms` }}
           >
             <div className="mb-4">{tool.icon}</div>
@@ -65,4 +65,3 @@ const FeaturedToolsSection: React.FC = () => (
 );
 
 export default FeaturedToolsSection;
-

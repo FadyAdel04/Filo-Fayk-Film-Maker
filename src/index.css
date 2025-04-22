@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -82,4 +81,35 @@
   .font-montserrat {
     font-family: 'Montserrat', sans-serif;
   }
+
+  .fade-in {
+    animation: fade-in 0.8s cubic-bezier(0.4,0,0.2,1);
+    will-change: opacity, transform;
+  }
+  .slide-in-up {
+    animation: slide-in-up 0.7s cubic-bezier(0.4,0,0.2,1);
+    will-change: opacity, transform;
+  }
+  .scale-hover {
+    transition: transform 0.22s cubic-bezier(0.4,0,0.6,1);
+  }
+  .scale-hover:hover {
+    transform: scale(1.05);
+  }
+  .bounce-slow {
+    animation: bounce-key 2.2s infinite;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(22px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(32px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes bounce-key {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-11px);}
 }

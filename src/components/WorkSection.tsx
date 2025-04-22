@@ -47,7 +47,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
 
   return (
     <section id="work" className="py-24 bg-gradient-to-b from-background to-background/95">
-      <div className="section-container">
+      <div className="section-container fade-in">
         <h2 className="section-title">My Work</h2>
         
         {/* Category Filter */}
@@ -56,7 +56,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`btn-category ${selectedCategory === category.id ? 'active' : 'bg-secondary text-gray-300'}`}
+              className={`btn-category ${selectedCategory === category.id ? 'active' : 'bg-secondary text-gray-300'} scale-hover`}
             >
               {category.name}
             </button>
@@ -65,10 +65,11 @@ const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
         
         {/* Videos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredVideos.map((video) => (
+          {filteredVideos.map((video, idx) => (
             <div 
               key={video.id} 
-              className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl bg-card cursor-pointer"
+              className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl bg-card cursor-pointer fade-in scale-hover"
+              style={{animationDelay: `${idx * 90}ms`}}
               onClick={() => openVideoModal(video)}
             >
               <div className="aspect-video w-full overflow-hidden">
@@ -79,7 +80,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
                 />
                 <div className="gradient-overlay"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-primary/90 text-white">
+                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-primary/90 text-white scale-hover">
                     <Play size={28} />
                   </div>
                 </div>
@@ -94,7 +95,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
         
         {/* Empty state */}
         {filteredVideos.length === 0 && (
-          <div className="text-center mt-10 py-8 bg-card/40 rounded-lg">
+          <div className="text-center mt-10 py-8 bg-card/40 rounded-lg fade-in">
             <p className="text-gray-400">No videos found in this category.</p>
           </div>
         )}
