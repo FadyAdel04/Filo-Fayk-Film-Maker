@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Palette, Music, Film, Sparkles, Mic, Paintbrush } from "lucide-react";
 
 const tools = [
@@ -48,30 +47,19 @@ const FeaturedToolsSection: React.FC = () => (
       <h2 className="section-title text-3xl md:text-4xl text-primary mb-10 font-bold animate-fade-in">
         Featured Tools & Techniques
       </h2>
-      <Carousel
-        opts={{
-          align: "center",
-          loop: true,
-        }}
-        className="relative"
-      >
-        <CarouselContent>
-          {tools.map((tool, idx) => (
-            <CarouselItem key={tool.title} className="flex justify-center">
-              <div
-                className={`w-full max-w-xs rounded-2xl shadow-lg ${tool.bg} p-8 mx-2 flex flex-col items-center text-center transition-transform hover:scale-105 animate-fade-in`}
-                style={{ animationDelay: `${idx * 120}ms` }}
-              >
-                <div className="mb-4">{tool.icon}</div>
-                <span className="font-bold text-lg text-primary mb-1">{tool.title}</span>
-                <p className="text-md text-muted-foreground">{tool.description}</p>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {tools.map((tool, idx) => (
+          <div
+            key={tool.title}
+            className={`w-full rounded-2xl shadow-lg ${tool.bg} p-8 flex flex-col items-center text-center transition-transform hover:scale-105 animate-fade-in`}
+            style={{ animationDelay: `${idx * 120}ms` }}
+          >
+            <div className="mb-4">{tool.icon}</div>
+            <span className="font-bold text-lg text-primary mb-1">{tool.title}</span>
+            <p className="text-md text-muted-foreground">{tool.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
