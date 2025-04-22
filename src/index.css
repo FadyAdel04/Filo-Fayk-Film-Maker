@@ -7,33 +7,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    /* Color palette from the provided image */
+    --background: 0 0% 95%;           /* #F1EFEC */
+    --foreground: 240 100% 2%;        /* #030303 */
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;                /* White for cards */
+    --card-foreground: 240 100% 2%;   /* #030303 */
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 95%;              /* #F1EFEC */
+    --popover-foreground: 240 100% 2%;/* #030303 */
 
-    --primary: 223 47% 20%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 218 70% 20%;           /* #123458 */
+    --primary-contrast: 0 0% 95%;     /* #F1EFEC */
+    --primary-foreground: 0 0% 95%;
 
-    --secondary: 23 20% 83%;
-    --secondary-foreground: 223 47% 20%;
+    --secondary: 30 20% 85%;          /* #D4C9BE */
+    --secondary-foreground: 218 70% 20%; /* #123458 */
 
-    --muted: 223 47% 20%;
-    --muted-foreground: 23 10% 90%;
+    --muted: 30 20% 85%;
+    --muted-foreground: 218 70% 20%;
 
-    --accent: 23 20% 83%;
-    --accent-foreground: 223 47% 20%;
+    --accent: 30 20% 85%;
+    --accent-foreground: 218 70% 20%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 350 100% 35%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 223 47% 20%;
-    --input: 223 47% 20%;
-    --ring: 23 20% 83%;
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 218 70% 20%;
 
     --radius: 0.5rem;
   }
@@ -45,10 +47,13 @@
   body {
     @apply bg-background text-foreground font-inter;
     overflow-x: hidden;
+    background-color: #F1EFEC;
+    color: #030303;
   }
 
   h1, h2, h3, h4 {
     @apply font-montserrat;
+    color: #123458;
   }
 }
 
@@ -56,21 +61,27 @@
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24;
   }
-  
+
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-12 text-center text-primary;
+    @apply text-3xl md:text-4xl font-bold mb-12 text-center;
+    color: #123458 !important;
   }
-  
+
   .gradient-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80;
+    @apply absolute inset-0 opacity-70;
+    background: linear-gradient(to top, #030303 0%, #123458 70%, #D4C9BE 100%);
   }
 
   .btn-category {
     @apply px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium;
+    background: #D4C9BE;
+    color: #123458;
   }
 
   .btn-category.active {
-    @apply bg-primary text-white;
+    @apply bg-primary text-primary-contrast;
+    background: #123458;
+    color: #F1EFEC;
   }
 }
 
@@ -78,7 +89,6 @@
   .font-inter {
     font-family: 'Inter', sans-serif;
   }
-
   .font-montserrat {
     font-family: 'Montserrat', sans-serif;
   }

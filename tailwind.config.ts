@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,47 +19,48 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
+        border: "#D4C9BE",
+        input: "#D4C9BE",
+        ring: "#123458",
         background: {
-          DEFAULT: "0 0% 7%",  // Dark background
-          light: "23 20% 89%", // Light background
+          DEFAULT: "#F1EFEC",
+          beige: "#D4C9BE",
+          blue: "#123458",
+          dark: "#030303",
         },
         foreground: {
-          DEFAULT: "0 0% 98%", // Light text
-          dark: "223 47% 20%", // Dark text
+          DEFAULT: "#030303",
+          light: "#F1EFEC",
         },
         primary: {
-          DEFAULT: "223 47% 20%", // Dark blue
-          light: "23 20% 83%",    // Muted brown
-          foreground: "0 0% 100%",
+          DEFAULT: "#123458",
+          contrast: "#F1EFEC",
         },
         secondary: {
-          DEFAULT: "23 20% 83%", // Muted brown
-          foreground: "223 47% 20%", // Dark blue
+          DEFAULT: "#D4C9BE",
+          foreground: "#123458",
         },
         muted: {
-          DEFAULT: "223 47% 20%", // Dark blue
-          foreground: "23 10% 90%", // Light beige
+          DEFAULT: "#D4C9BE",
+          foreground: "#123458",
         },
         accent: {
-          DEFAULT: "23 20% 83%", // Muted brown
-          foreground: "223 47% 20%", // Dark blue
+          DEFAULT: "#D4C9BE",
+          foreground: "#123458",
         },
         card: {
-          DEFAULT: "0 0% 7%",     // Dark background
-          foreground: "0 0% 98%",  // Light text
+          DEFAULT: "#FFFFFF",
+          foreground: "#030303",
         },
         destructive: {
-          DEFAULT: "0 84.2% 60.2%",
-          foreground: "0 0% 98%",
+          DEFAULT: "#B00020",
+          foreground: "#F1EFEC",
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0.5rem",
+        md: "0.375rem",
+        sm: "0.25rem",
       },
       keyframes: {
         "accordion-down": {
@@ -80,4 +80,3 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
