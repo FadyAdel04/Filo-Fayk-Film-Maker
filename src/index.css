@@ -10,30 +10,30 @@
     --background: 0 0% 7%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 7%;
+    --card: 0 0% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 7%;
+    --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 223 47% 20%;
+    --primary: 355 100% 57%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 23 20% 83%;
-    --secondary-foreground: 223 47% 20%;
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 223 47% 20%;
-    --muted-foreground: 23 10% 90%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 75.1%;
 
-    --accent: 23 20% 83%;
-    --accent-foreground: 223 47% 20%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 223 47% 20%;
-    --input: 223 47% 20%;
-    --ring: 23 20% 83%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
 
     --radius: 0.5rem;
   }
@@ -58,7 +58,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-12 text-center text-primary;
+    @apply text-3xl md:text-4xl font-bold mb-12 text-center;
   }
   
   .gradient-overlay {
@@ -83,4 +83,3 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
-
