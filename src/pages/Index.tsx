@@ -1,10 +1,10 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import WorkSection from '@/components/WorkSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import portfolioData from '@/data/portfolioData.json';
 
 const Index = () => {
@@ -17,6 +17,7 @@ const Index = () => {
           categories={portfolioData.categories} 
           videos={portfolioData.videos} 
         />
+        <TestimonialsSection />
         <ContactSection 
           email={portfolioData.personalInfo.email}
           socialLinks={portfolioData.personalInfo.social}
