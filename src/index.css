@@ -7,32 +7,35 @@
 
 @layer base {
   :root {
-    /* Old dark theme with red styles */
-    --background: 220 10% 13%;           /* #222 */
-    --foreground: 0 0% 100%;             /* #fff */
-    --card: 220 10% 13%;                 /* #222 */
-    --card-foreground: 0 0% 100%;        /* #fff */
-    --popover: 220 10% 13%;
-    --popover-foreground: 0 0% 100%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;                 /* #fff for primary elements */
-    --primary-foreground: 220 8% 20%;     /* #333 dark gray text/icons on primary */
-    --secondary: 220 10% 13%;             /* #222 */
-    --secondary-foreground: 0 0% 100%;    /* #fff */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
 
-    --muted: 220 10% 20%;                  /* #333 slightly lighter dark */
-    --muted-foreground: 0 0% 80%;          /* #ccc */
-    --accent: 220 8% 20%;
-    --accent-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
 
-    --destructive: 348 78% 57%;           /* #ea384c red */
-    --destructive-foreground: 0 0% 100%;
+    --primary: 223 47% 20%;
+    --primary-foreground: 0 0% 100%;
 
-    --border: 220 8% 20%;                  /* #333 border color */
-    --input: 220 8% 20%;
-    --ring: 348 78% 57%;                  /* #ea384c ring focus red */
+    --secondary: 23 20% 83%;
+    --secondary-foreground: 223 47% 20%;
 
-    --radius: 0.75rem;
+    --muted: 223 47% 20%;
+    --muted-foreground: 23 10% 90%;
+
+    --accent: 23 20% 83%;
+    --accent-foreground: 223 47% 20%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 223 47% 20%;
+    --input: 223 47% 20%;
+    --ring: 23 20% 83%;
+
+    --radius: 0.5rem;
   }
 
   html {
@@ -42,13 +45,10 @@
   body {
     @apply bg-background text-foreground font-inter;
     overflow-x: hidden;
-    background-color: #222;
-    color: #fff;
   }
 
   h1, h2, h3, h4 {
     @apply font-montserrat;
-    color: #ea384c; /* red for headlines */
   }
 }
 
@@ -56,27 +56,21 @@
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24;
   }
-
+  
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-12 text-center;
-    color: #ea384c !important;
+    @apply text-3xl md:text-4xl font-bold mb-12 text-center text-primary;
   }
-
+  
   .gradient-overlay {
-    @apply absolute inset-0 opacity-70;
-    background: linear-gradient(to top, #222 0%, #ea384c 60%, #fff 100%);
+    @apply absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80;
   }
 
   .btn-category {
     @apply px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium;
-    background: #333;
-    color: #fff;
   }
 
   .btn-category.active {
-    @apply bg-destructive text-destructive-foreground;
-    background: #ea384c;
-    color: #fff;
+    @apply bg-primary text-white;
   }
 }
 
@@ -84,7 +78,9 @@
   .font-inter {
     font-family: 'Inter', sans-serif;
   }
+
   .font-montserrat {
     font-family: 'Montserrat', sans-serif;
   }
 }
+

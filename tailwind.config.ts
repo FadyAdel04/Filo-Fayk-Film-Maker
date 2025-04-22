@@ -23,41 +23,44 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: {
+          DEFAULT: "0 0% 7%",  // Dark background
+          light: "23 20% 89%", // Light background
+        },
+        foreground: {
+          DEFAULT: "0 0% 98%", // Light text
+          dark: "223 47% 20%", // Dark text
+        },
         primary: {
-          DEFAULT: "hsl(var(--primary))",           // white
-          foreground: "hsl(var(--primary-foreground))", // dark gray
+          DEFAULT: "223 47% 20%", // Dark blue
+          light: "23 20% 83%",    // Muted brown
+          foreground: "0 0% 100%",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",          // #222
-          foreground: "hsl(var(--secondary-foreground))", // white
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",        // red
-          foreground: "hsl(var(--destructive-foreground))", // white
+          DEFAULT: "23 20% 83%", // Muted brown
+          foreground: "223 47% 20%", // Dark blue
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "223 47% 20%", // Dark blue
+          foreground: "23 10% 90%", // Light beige
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "23 20% 83%", // Muted brown
+          foreground: "223 47% 20%", // Dark blue
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "0 0% 7%",     // Dark background
+          foreground: "0 0% 98%",  // Light text
+        },
+        destructive: {
+          DEFAULT: "0 84.2% 60.2%",
+          foreground: "0 0% 98%",
         },
       },
       borderRadius: {
-        lg: "0.75rem",
-        md: "0.5rem",
-        sm: "0.25rem",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
         "accordion-down": {
@@ -77,3 +80,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
