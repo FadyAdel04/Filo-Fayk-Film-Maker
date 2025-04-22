@@ -7,37 +7,32 @@
 
 @layer base {
   :root {
-    /* Color palette from the provided image */
-    --background: 0 0% 95%;           /* #F1EFEC */
-    --foreground: 240 100% 2%;        /* #030303 */
+    /* Old dark theme with red styles */
+    --background: 220 10% 13%;           /* #222 */
+    --foreground: 0 0% 100%;             /* #fff */
+    --card: 220 10% 13%;                 /* #222 */
+    --card-foreground: 0 0% 100%;        /* #fff */
+    --popover: 220 10% 13%;
+    --popover-foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;                /* White for cards */
-    --card-foreground: 240 100% 2%;   /* #030303 */
+    --primary: 0 0% 100%;                 /* #fff for primary elements */
+    --primary-foreground: 220 8% 20%;     /* #333 dark gray text/icons on primary */
+    --secondary: 220 10% 13%;             /* #222 */
+    --secondary-foreground: 0 0% 100%;    /* #fff */
 
-    --popover: 0 0% 95%;              /* #F1EFEC */
-    --popover-foreground: 240 100% 2%;/* #030303 */
+    --muted: 220 10% 20%;                  /* #333 slightly lighter dark */
+    --muted-foreground: 0 0% 80%;          /* #ccc */
+    --accent: 220 8% 20%;
+    --accent-foreground: 0 0% 100%;
 
-    --primary: 218 70% 20%;           /* #123458 */
-    --primary-contrast: 0 0% 95%;     /* #F1EFEC */
-    --primary-foreground: 0 0% 95%;
+    --destructive: 348 78% 57%;           /* #ea384c red */
+    --destructive-foreground: 0 0% 100%;
 
-    --secondary: 30 20% 85%;          /* #D4C9BE */
-    --secondary-foreground: 218 70% 20%; /* #123458 */
+    --border: 220 8% 20%;                  /* #333 border color */
+    --input: 220 8% 20%;
+    --ring: 348 78% 57%;                  /* #ea384c ring focus red */
 
-    --muted: 30 20% 85%;
-    --muted-foreground: 218 70% 20%;
-
-    --accent: 30 20% 85%;
-    --accent-foreground: 218 70% 20%;
-
-    --destructive: 350 100% 35%;
-    --destructive-foreground: 0 0% 95%;
-
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 218 70% 20%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   html {
@@ -47,13 +42,13 @@
   body {
     @apply bg-background text-foreground font-inter;
     overflow-x: hidden;
-    background-color: #F1EFEC;
-    color: #030303;
+    background-color: #222;
+    color: #fff;
   }
 
   h1, h2, h3, h4 {
     @apply font-montserrat;
-    color: #123458;
+    color: #ea384c; /* red for headlines */
   }
 }
 
@@ -64,24 +59,24 @@
 
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-12 text-center;
-    color: #123458 !important;
+    color: #ea384c !important;
   }
 
   .gradient-overlay {
     @apply absolute inset-0 opacity-70;
-    background: linear-gradient(to top, #030303 0%, #123458 70%, #D4C9BE 100%);
+    background: linear-gradient(to top, #222 0%, #ea384c 60%, #fff 100%);
   }
 
   .btn-category {
     @apply px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium;
-    background: #D4C9BE;
-    color: #123458;
+    background: #333;
+    color: #fff;
   }
 
   .btn-category.active {
-    @apply bg-primary text-primary-contrast;
-    background: #123458;
-    color: #F1EFEC;
+    @apply bg-destructive text-destructive-foreground;
+    background: #ea384c;
+    color: #fff;
   }
 }
 
@@ -93,4 +88,3 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
-

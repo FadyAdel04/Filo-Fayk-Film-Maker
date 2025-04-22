@@ -20,47 +20,43 @@ export default {
     },
     extend: {
       colors: {
-        border: "#D4C9BE",
-        input: "#D4C9BE",
-        ring: "#123458",
-        background: {
-          DEFAULT: "#F1EFEC",
-          beige: "#D4C9BE",
-          blue: "#123458",
-          dark: "#030303",
-        },
-        foreground: {
-          DEFAULT: "#030303",
-          light: "#F1EFEC",
-        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#123458",
-          contrast: "#F1EFEC",
+          DEFAULT: "hsl(var(--primary))",           // white
+          foreground: "hsl(var(--primary-foreground))", // dark gray
         },
         secondary: {
-          DEFAULT: "#D4C9BE",
-          foreground: "#123458",
-        },
-        muted: {
-          DEFAULT: "#D4C9BE",
-          foreground: "#123458",
-        },
-        accent: {
-          DEFAULT: "#D4C9BE",
-          foreground: "#123458",
-        },
-        card: {
-          DEFAULT: "#FFFFFF",
-          foreground: "#030303",
+          DEFAULT: "hsl(var(--secondary))",          // #222
+          foreground: "hsl(var(--secondary-foreground))", // white
         },
         destructive: {
-          DEFAULT: "#B00020",
-          foreground: "#F1EFEC",
+          DEFAULT: "hsl(var(--destructive))",        // red
+          foreground: "hsl(var(--destructive-foreground))", // white
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
       borderRadius: {
-        lg: "0.5rem",
-        md: "0.375rem",
+        lg: "0.75rem",
+        md: "0.5rem",
         sm: "0.25rem",
       },
       keyframes: {
