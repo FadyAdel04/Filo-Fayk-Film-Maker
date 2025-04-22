@@ -4,21 +4,25 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import WorkSection from '@/components/WorkSection';
 import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 import portfolioData from '@/data/portfolioData.json';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Navbar />
-      <HeroSection personalInfo={portfolioData.personalInfo} />
-      <WorkSection 
-        categories={portfolioData.categories} 
-        videos={portfolioData.videos} 
-      />
-      <ContactSection 
-        email={portfolioData.personalInfo.email}
-        socialLinks={portfolioData.personalInfo.social}
-      />
+      <div className="flex-grow">
+        <HeroSection personalInfo={portfolioData.personalInfo} />
+        <WorkSection 
+          categories={portfolioData.categories} 
+          videos={portfolioData.videos} 
+        />
+        <ContactSection 
+          email={portfolioData.personalInfo.email}
+          socialLinks={portfolioData.personalInfo.social}
+        />
+      </div>
+      <Footer />
     </div>
   );
 };
