@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -5,6 +6,7 @@ import WorkSection from '@/components/WorkSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import FeaturedToolsSection from '@/components/FeaturedToolsSection';
 import portfolioData from '@/data/portfolioData.json';
 
 const Index = () => {
@@ -18,6 +20,7 @@ const Index = () => {
           videos={portfolioData.videos} 
         />
         <TestimonialsSection />
+        <FeaturedToolsSection />
         <ContactSection 
           email={portfolioData.personalInfo.email}
           socialLinks={portfolioData.personalInfo.social}
@@ -29,3 +32,4 @@ const Index = () => {
 };
 
 export default Index;
+
