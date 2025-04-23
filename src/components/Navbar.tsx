@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,13 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold font-montserrat text-white">VideoPulse</div>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/bac2036e-7771-4e8f-bf95-30b3a2f534ec.png" 
+            alt="Filo Fayk Logo" 
+            className="h-10 w-auto object-contain"
+          />
+        </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
@@ -103,3 +110,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
