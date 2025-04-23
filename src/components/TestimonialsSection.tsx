@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Star } from "lucide-react";
 import {
@@ -108,7 +107,7 @@ const TestimonialsSection: React.FC = () => {
   }, [] as typeof testimonials[]);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-[#9b87f5]/10 via-[#7E69AB]/20 to-background/90" id="testimonials">
+    <section id="reviews" className="py-24 bg-gradient-to-br from-[#9b87f5]/10 via-[#7E69AB]/20 to-background/90">
       <div className="section-container max-w-6xl mx-auto fade-in">
         <h2 className="section-title text-4xl md:text-5xl text-primary mb-12 font-bold fade-in">
           Testimonials

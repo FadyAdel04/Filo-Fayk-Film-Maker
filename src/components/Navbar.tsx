@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
@@ -6,14 +7,31 @@ import { Home, Briefcase, Star, Award, Mail } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
+      const sections = ['home', 'work', 'reviews', 'features', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for better detection
+
+      // Update navbar background
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
+
+      // Find the current active section
+      sections.forEach((sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
+          }
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -58,7 +76,12 @@ const Navbar = () => {
             <button 
               key={item.section}
               onClick={() => scrollToSection(item.section)} 
-              className="text-white hover:text-primary transition-colors flex items-center gap-2"
+              className={cn(
+                "transition-colors flex items-center gap-2",
+                activeSection === item.section 
+                  ? "text-[#ea384c]" 
+                  : "text-white hover:text-primary"
+              )}
             >
               {item.icon}
               {item.label}
@@ -89,7 +112,12 @@ const Navbar = () => {
             <button 
               key={item.section}
               onClick={() => scrollToSection(item.section)} 
-              className="text-white py-2 hover:text-primary transition-colors text-left flex items-center gap-2"
+              className={cn(
+                "py-2 transition-colors text-left flex items-center gap-2",
+                activeSection === item.section 
+                  ? "text-[#ea384c]" 
+                  : "text-white hover:text-primary"
+              )}
             >
               {item.icon}
               {item.label}
