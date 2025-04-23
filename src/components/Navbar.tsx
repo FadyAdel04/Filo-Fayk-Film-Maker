@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
+import { Home, Briefcase, Star, Award, Mail } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +28,14 @@ const Navbar = () => {
     }
   };
 
+  const navItems = [
+    { label: 'Home', icon: <Home size={18} />, section: 'home' },
+    { label: 'Work', icon: <Briefcase size={18} />, section: 'work' },
+    { label: 'Reviews', icon: <Star size={18} />, section: 'reviews' },
+    { label: 'Featured', icon: <Award size={18} />, section: 'features' },
+    { label: 'Contact', icon: <Mail size={18} />, section: 'contact' },
+  ];
+
   return (
     <nav 
       className={cn(
@@ -46,24 +54,16 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <button 
-            onClick={() => scrollToSection('home')} 
-            className="text-white hover:text-primary transition-colors"
-          >
-            Home
-          </button>
-          <button 
-            onClick={() => scrollToSection('work')} 
-            className="text-white hover:text-primary transition-colors"
-          >
-            Work
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="text-white hover:text-primary transition-colors"
-          >
-            Contact
-          </button>
+          {navItems.map((item) => (
+            <button 
+              key={item.section}
+              onClick={() => scrollToSection(item.section)} 
+              className="text-white hover:text-primary transition-colors flex items-center gap-2"
+            >
+              {item.icon}
+              {item.label}
+            </button>
+          ))}
         </div>
         
         {/* Mobile Navigation Toggle */}
@@ -85,24 +85,16 @@ const Navbar = () => {
         isOpen ? "top-16 opacity-100" : "-top-full opacity-0"
       )}>
         <div className="flex flex-col p-4 space-y-4">
-          <button 
-            onClick={() => scrollToSection('home')} 
-            className="text-white py-2 hover:text-primary transition-colors text-left"
-          >
-            Home
-          </button>
-          <button 
-            onClick={() => scrollToSection('work')} 
-            className="text-white py-2 hover:text-primary transition-colors text-left"
-          >
-            Work
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="text-white py-2 hover:text-primary transition-colors text-left"
-          >
-            Contact
-          </button>
+          {navItems.map((item) => (
+            <button 
+              key={item.section}
+              onClick={() => scrollToSection(item.section)} 
+              className="text-white py-2 hover:text-primary transition-colors text-left flex items-center gap-2"
+            >
+              {item.icon}
+              {item.label}
+            </button>
+          ))}
         </div>
       </div>
     </nav>
@@ -110,4 +102,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
