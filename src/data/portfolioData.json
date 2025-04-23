@@ -4,7 +4,7 @@
     "name": "Filopater Fayk",
     "title": "Film Maker",
     "description": "a professional video editor with extensive experience in editing and creating visual content.",
-    "profileImage": "../images/hero.jpg",
+    "profileImage": "../../public/assets/hero.jpg",
     "social": [
       {
         "platform": "youtube",
@@ -56,7 +56,7 @@
       "id": "video1",
       "title": "Syrian coach",
       "category": "Reels",
-      "thumbnail": "../small/reel1.jpg",
+      "thumbnail": "../../public/assets/reel1.jpg",
       "videoUrl": "https://drive.google.com/file/d/1Zdp1wDL6dlAKykhrmYkV0M6v2Z8nauXs/preview",
       "description": "A commercial project showcasing breathtaking mountain landscapes and adventure sports."
     },

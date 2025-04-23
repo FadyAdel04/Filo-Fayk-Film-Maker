@@ -11,71 +11,74 @@ import 'aos/dist/aos.css';
 
 const testimonials = [
   {
-    avatar: "../images/review1.jpeg",
+    avatar: "../../public/assets/r1.jpg",
   },
   {
-    avatar: "../images/review2.jpeg",
+    avatar: "../../public/assets/r2.jpg",
   },
   {
-    avatar: "../images/review3.jpeg",
+    avatar: "../../public/assets/r3.jpg",
   },
   {
-    avatar: "../images/review4.jpeg",
+    avatar: "../../public/assets/r4.jpg",
   },
   {
-    avatar: "../images/review5.jpeg",
+    avatar: "../../public/assets/r5.jpg",
   },
   {
-    avatar: "../images/review6.jpeg",
+    avatar: "../../public/assets/r6.jpg",
   },
   {
-    avatar: "../images/review7.jpeg",
+    avatar: "../../public/assets/r7.jpg",
   },
   {
-    avatar: "../images/review8.jpeg",
+    avatar: "../../public/assets/r8.jpg",
   },
   {
-    avatar: "../images/review9.jpeg",
+    avatar: "../../public/assets/r9.jpg",
   },
   {
-    avatar: "../images/review10.jpeg",
+    avatar: "../../public/assets/r10.jpg",
   },
   {
-    avatar: "../images/review11.jpeg",
+    avatar: "../../public/assets/r11.jpg",
   },
   {
-    avatar: "../images/review12.jpeg",
+    avatar: "../../public/assets/r12.jpg",
   },
   {
-    avatar: "../images/review13.jpeg",
+    avatar: "../../public/assets/r13.jpg",
   },
   {
-    avatar: "../images/review14.jpeg",
+    avatar: "../../public/assets/r14.jpg",
   },
   {
-    avatar: "../images/review15.jpeg",
+    avatar: "../../public/assets/r15.jpg",
   },
   {
-    avatar: "../images/review16.jpeg",
+    avatar: "../../public/assets/r16.jpg",
   },
   {
-    avatar: "../images/review17.jpeg",
+    avatar: "../../public/assets/r17.jpg",
   },
   {
-    avatar: "../images/review18.jpeg",
+    avatar: "../../public/assets/r18.jpg",
   },
   {
-    avatar: "../images/review19.jpeg",
+    avatar: "../../public/assets/r19.jpg",
   },
   {
-    avatar: "../images/review20.jpeg",
+    avatar: "../../public/assets/r20.jpg",
   },
   {
-    avatar: "../images/review21.jpeg",
+    avatar: "../../public/assets/r21.jpg",
   },
   {
-    avatar: "../images/review22.jpeg",
-  }
+    avatar: "../../public/assets/r22.jpg",
+  },
+  {
+    avatar: "../../public/assets/r23.jpg",
+  },
 ];
 
 const TestimonialsSection: React.FC = () => {
