@@ -3,6 +3,8 @@ import SocialLinks from "./SocialLinks";
 import { ArrowDown } from "lucide-react";
 import "aos/dist/aos.css"; // Import AOS styles
 
+import hero from "../images/hero.jpg"
+
 interface HeroSectionProps {
   personalInfo: {
     name: string;
@@ -88,7 +90,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalInfo }) => {
         >
           <div className="relative z-10 rounded-xl overflow-hidden w-full max-w-md shadow-xl">
             <img
-              src={personalInfo.profileImage}
+              src={hero}
               alt={personalInfo.name}
               className="w-full h-auto object-cover"
               data-aos="zoom-in"

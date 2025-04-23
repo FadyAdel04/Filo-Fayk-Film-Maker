@@ -9,75 +9,99 @@ import {
 } from "@/components/ui/carousel";
 import 'aos/dist/aos.css';
 
+import r1 from "../images/r1.jpg";
+import r2 from "../images/r2.jpg";
+import r3 from "../images/r3.jpg";
+import r4 from "../images/r4.jpg";
+import r5 from "../images/r5.jpg";
+import r6 from "../images/r6.jpg";
+import r7 from "../images/r7.jpg";
+import r8 from "../images/r8.jpg";
+import r9 from "../images/r9.jpg";
+import r10 from "../images/r10.jpg";
+import r11 from "../images/r11.jpg";
+import r12 from "../images/r12.jpg";
+import r13 from "../images/r13.jpg";
+import r14 from "../images/r14.jpg";
+import r15 from "../images/r15.jpg";
+import r16 from "../images/r16.jpg";
+import r17 from "../images/r17.jpg";
+import r18 from "../images/r18.jpg";
+import r19 from "../images/r19.jpg";
+import r20 from "../images/r20.jpg";
+import r21 from "../images/r21.jpg";
+import r22 from "../images/r22.jpg";
+import r23 from "../images/r23.jpg";
+
 const testimonials = [
   {
-    avatar: "../../public/assets/r1.jpg",
+    avatar: r1,
   },
   {
-    avatar: "../../public/assets/r2.jpg",
+    avatar: r2,
   },
   {
-    avatar: "../../public/assets/r3.jpg",
+    avatar: r3,
   },
   {
-    avatar: "../../public/assets/r4.jpg",
+    avatar: r4,
   },
   {
-    avatar: "../../public/assets/r5.jpg",
+    avatar: r5,
   },
   {
-    avatar: "../../public/assets/r6.jpg",
+    avatar: r6,
   },
   {
-    avatar: "../../public/assets/r7.jpg",
+    avatar: r7,
   },
   {
-    avatar: "../../public/assets/r8.jpg",
+    avatar: r8,
   },
   {
-    avatar: "../../public/assets/r9.jpg",
+    avatar: r9,
   },
   {
-    avatar: "../../public/assets/r10.jpg",
+    avatar: r10,
   },
   {
-    avatar: "../../public/assets/r11.jpg",
+    avatar: r11,
   },
   {
-    avatar: "../../public/assets/r12.jpg",
+    avatar: r12,
   },
   {
-    avatar: "../../public/assets/r13.jpg",
+    avatar: r13,
   },
   {
-    avatar: "../../public/assets/r14.jpg",
+    avatar: r14,
   },
   {
-    avatar: "../../public/assets/r15.jpg",
+    avatar: r15,
   },
   {
-    avatar: "../../public/assets/r16.jpg",
+    avatar: r16,
   },
   {
-    avatar: "../../public/assets/r17.jpg",
+    avatar: r17,
   },
   {
-    avatar: "../../public/assets/r18.jpg",
+    avatar: r18,
   },
   {
-    avatar: "../../public/assets/r19.jpg",
+    avatar: r19,
   },
   {
-    avatar: "../../public/assets/r20.jpg",
+    avatar: r20,
   },
   {
-    avatar: "../../public/assets/r21.jpg",
+    avatar: r21,
   },
   {
-    avatar: "../../public/assets/r22.jpg",
+    avatar: r22,
   },
   {
-    avatar: "../../public/assets/r23.jpg",
+    avatar: r23,
   },
 ];
 
