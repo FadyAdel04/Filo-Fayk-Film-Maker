@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
 import { Home, Briefcase, Star, Award, Mail } from 'lucide-react';
 
-import logo from '../../public/images/logo.jpg'
+import logo from '../images/logo.jpg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

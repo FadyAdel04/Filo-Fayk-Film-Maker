@@ -11,70 +11,70 @@ import 'aos/dist/aos.css';
 
 const testimonials = [
   {
-    avatar: "../../public/images/review1.jpeg",
+    avatar: "../images/review1.jpeg",
   },
   {
-    avatar: "../../public/images/review2.jpeg",
+    avatar: "../images/review2.jpeg",
   },
   {
-    avatar: "../../public/images/review3.jpeg",
+    avatar: "../images/review3.jpeg",
   },
   {
-    avatar: "../../public/images/review4.jpeg",
+    avatar: "../images/review4.jpeg",
   },
   {
-    avatar: "../../public/images/review5.jpeg",
+    avatar: "../images/review5.jpeg",
   },
   {
-    avatar: "../../public/images/review6.jpeg",
+    avatar: "../images/review6.jpeg",
   },
   {
-    avatar: "../../public/images/review7.jpeg",
+    avatar: "../images/review7.jpeg",
   },
   {
-    avatar: "../../public/images/review8.jpeg",
+    avatar: "../images/review8.jpeg",
   },
   {
-    avatar: "../../public/images/review9.jpeg",
+    avatar: "../images/review9.jpeg",
   },
   {
-    avatar: "../../public/images/review10.jpeg",
+    avatar: "../images/review10.jpeg",
   },
   {
-    avatar: "../../public/images/review11.jpeg",
+    avatar: "../images/review11.jpeg",
   },
   {
-    avatar: "../../public/images/review12.jpeg",
+    avatar: "../images/review12.jpeg",
   },
   {
-    avatar: "../../public/images/review13.jpeg",
+    avatar: "../images/review13.jpeg",
   },
   {
-    avatar: "../../public/images/review14.jpeg",
+    avatar: "../images/review14.jpeg",
   },
   {
-    avatar: "../../public/images/review15.jpeg",
+    avatar: "../images/review15.jpeg",
   },
   {
-    avatar: "../../public/images/review16.jpeg",
+    avatar: "../images/review16.jpeg",
   },
   {
-    avatar: "../../public/images/review17.jpeg",
+    avatar: "../images/review17.jpeg",
   },
   {
-    avatar: "../../public/images/review18.jpeg",
+    avatar: "../images/review18.jpeg",
   },
   {
-    avatar: "../../public/images/review19.jpeg",
+    avatar: "../images/review19.jpeg",
   },
   {
-    avatar: "../../public/images/review20.jpeg",
+    avatar: "../images/review20.jpeg",
   },
   {
-    avatar: "../../public/images/review21.jpeg",
+    avatar: "../images/review21.jpeg",
   },
   {
-    avatar: "../../public/images/review22.jpeg",
+    avatar: "../images/review22.jpeg",
   }
 ];
 
