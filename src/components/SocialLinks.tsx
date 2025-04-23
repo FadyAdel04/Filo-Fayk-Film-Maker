@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, Youtube, Linkedin } from 'lucide-react';
+import { Instagram, Youtube, Linkedin, Facebook } from 'lucide-react';
 
 interface SocialLink {
   platform: string;
@@ -16,12 +16,10 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ links, className = "" }) => {
   // Map platform names to their respective icons
   const getIcon = (platform: string, size = 20) => {
     switch (platform.toLowerCase()) {
-      case 'instagram':
-        return <Instagram size={size} />;
+      case 'facebook':
+        return <Facebook size={size} />;
       case 'youtube':
         return <Youtube size={size} />;
-      case 'linkedin':
-        return <Linkedin size={size} />;
       default:
         return null;
     }

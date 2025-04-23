@@ -1,42 +1,41 @@
-
 import React from "react";
-import { Palette, Music, Film, Sparkles, Mic, Paintbrush } from "lucide-react";
+import { Scissors, Palette, MoveRight, Image, Subtitles, Smartphone } from "lucide-react";
 
 const tools = [
   {
-    title: "Color Grading",
-    description: "Make every frame cinematic and vibrant with expert grading.",
-    icon: <Palette size={48} className="text-primary" />,
+    title: "Professional Video Editing",
+    description: "Editing and formatting videos in a professional manner that suits various types of projects.",
+    icon: <Scissors size={48} className="text-primary" />,
     bg: "bg-gradient-to-br from-[#9b87f5]/30 to-[#ffe29f]/30"
   },
   {
-    title: "Sound Design",
-    description: "Craft immersive soundscapes for maximum emotional impact.",
-    icon: <Music size={48} className="text-primary" />,
+    title: "Color Correction & Enhancement",
+    description: "Transforming videos into works with a distinctive and delightful visual style.",
+    icon: <Palette size={48} className="text-primary" />,
     bg: "bg-gradient-to-br from-[#fad0c4]/50 to-[#ffd1ff]/40"
   },
   {
-    title: "Cinematic Cuts",
-    description: "Professional editing for storytelling that flows and excites.",
-    icon: <Film size={48} className="text-primary" />,
+    title: "Transition Design",
+    description: "Creating smooth and impactful transitions between scenes to highlight the flow of the visual narrative.",
+    icon: <MoveRight size={48} className="text-primary" />,
     bg: "bg-gradient-to-br from-[#e0c3fc]/40 to-[#8ec5fc]/30"
   },
   {
-    title: "Special Effects",
-    description: "Add a touch of magic, from subtle glows to jaw-dropping VFX.",
-    icon: <Sparkles size={48} className="text-primary" />,
+    title: "Special Touches",
+    description: "Inserting logos, images, and professional subtitles to enhance your content.",
+    icon: <Image size={48} className="text-primary" />,
     bg: "bg-gradient-to-br from-[#ffecd2]/50 to-[#fcb69f]/30"
   },
   {
-    title: "Voice Enhancement",
-    description: "Crystal-clear voiceovers and interviews, perfectly balanced.",
-    icon: <Mic size={48} className="text-primary" />,
+    title: "Subtitle Creation",
+    description: "Creating subtitles for films, series, or any other visual content.",
+    icon: <Subtitles size={48} className="text-primary" />,
     bg: "bg-gradient-to-br from-[#f3e7e9]/40 to-[#eadcfb]/40"
   },
   {
-    title: "Motion Graphics",
-    description: "Dynamic titles and animated overlays for engaging content.",
-    icon: <Paintbrush size={48} className="text-primary" />,
+    title: "Format Conversion",
+    description: "Converting videos to meet the needs of various platforms and devices.",
+    icon: <Smartphone size={48} className="text-primary" />,
     bg: "bg-gradient-to-br from-[#d9afd9]/30 to-[#97d9e1]/30"
   }
 ];

@@ -1,6 +1,5 @@
-
-import React, { useEffect, useRef, useState } from 'react';
-import { X, Volume2, VolumeX, Play, Pause } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { X } from 'lucide-react';
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -13,8 +12,6 @@ interface VideoModalProps {
 }
 
 const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, video }) => {
-  const [isMuted, setIsMuted] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true);
   const modalRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -46,52 +43,15 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, video }) => {
 
   if (!isOpen || !video) return null;
 
-  // Google Drive URL parsing to add parameters
-  const getVideoSrc = () => {
-    let url = video.videoUrl;
-    
-    // Add parameters for controls
-    if (url.includes('drive.google.com')) {
-      // Add autoplay parameter if not already present
-      if (!url.includes('autoplay=')) {
-        url += (url.includes('?') ? '&' : '?') + 'autoplay=1';
-      }
-      
-      // Add mute parameter based on state
-      if (isMuted) {
-        url = url.replace(/mute=0/g, 'mute=1');
-        if (!url.includes('mute=')) {
-          url += '&mute=1';
-        }
-      } else {
-        url = url.replace(/mute=1/g, 'mute=0');
-        if (!url.includes('mute=')) {
-          url += '&mute=0';
-        }
-      }
-    }
-    
-    return url;
-  };
+  // Get embed-ready Google Drive video link
+  const buildDriveUrl = () => {
+    let baseUrl = video.videoUrl;
 
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-    if (iframeRef.current) {
-      // This is a bit limited for iframes, but we'll do our best
-      if (isPlaying) {
-        // Attempt to pause by reloading without autoplay
-        const currentSrc = iframeRef.current.src;
-        iframeRef.current.src = currentSrc.replace('autoplay=1', 'autoplay=0');
-      } else {
-        // Attempt to play by reloading with autoplay
-        const currentSrc = iframeRef.current.src;
-        iframeRef.current.src = currentSrc.replace('autoplay=0', 'autoplay=1');
-      }
+    if (baseUrl.includes('/view')) {
+      baseUrl = baseUrl.replace('/view', '/preview');
     }
-  };
 
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
+    return baseUrl;
   };
 
   return (
@@ -113,28 +73,11 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, video }) => {
         <div className="relative flex-grow overflow-hidden bg-black">
           <iframe 
             ref={iframeRef}
-            src={getVideoSrc()} 
+            src={buildDriveUrl()} 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full min-h-[300px] md:min-h-[450px]"
           ></iframe>
-          
-          {/* Custom controls overlay */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex justify-between items-center">
-            <button 
-              onClick={togglePlay}
-              className="text-white hover:text-primary"
-            >
-              {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-            </button>
-            
-            <button 
-              onClick={toggleMute}
-              className="text-white hover:text-primary"
-            >
-              {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-            </button>
-          </div>
         </div>
         
         {video.description && (
