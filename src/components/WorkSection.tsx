@@ -57,6 +57,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
   const closeVideoModal = () => {
     setIsModalOpen(false);
   };
+  
 
   return (
     <section
