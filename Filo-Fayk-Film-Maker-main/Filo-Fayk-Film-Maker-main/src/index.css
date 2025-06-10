@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 355 100% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 75.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-montserrat;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-12 text-center;
+  }
+  
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80;
+  }
+
+  .btn-category {
+    @apply px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium;
+  }
+
+  .btn-category.active {
+    @apply bg-primary text-white;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .fade-in {
+    animation: fade-in 0.8s cubic-bezier(0.4,0,0.2,1);
+    will-change: opacity, transform;
+  }
+  .slide-in-up {
+    animation: slide-in-up 0.7s cubic-bezier(0.4,0,0.2,1);
+    will-change: opacity, transform;
+  }
+  .scale-hover {
+    transition: transform 0.22s cubic-bezier(0.4,0,0.6,1);
+  }
+  .scale-hover:hover {
+    transform: scale(1.05);
+  }
+  .bounce-slow {
+    animation: bounce-key 2.2s infinite;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(22px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(32px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes bounce-key {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-11px);}
+}
