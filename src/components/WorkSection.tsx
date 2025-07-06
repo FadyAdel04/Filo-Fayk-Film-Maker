@@ -22,7 +22,7 @@ interface WorkSectionProps {
 }
 
 const WorkSection: React.FC<WorkSectionProps> = ({ categories, videos }) => {
-  const [selectedCategory, setSelectedCategory] = useState("Reels");
+  const [selectedCategory, setSelectedCategory] = useState("Reels!");
   const [filteredVideos, setFilteredVideos] = useState<Video[]>([]);
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
